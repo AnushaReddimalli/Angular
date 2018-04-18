@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+<table id="myTable" >
+  
+    <tr>
+        <td >Product ID :</td>
+        <td><input type="text" [(ngModel)]="product.productId" value = "{{product.productId}}" required></td>
+        </tr>
+       <tr><td>Product Name : </td>
+        <td><input type="text" [(ngModel)]="product.productName" value="{{product.productName}}" required></td>
+       </tr>
+       <tr><td>Product Description : </td>
+        <td><input type="text" [(ngModel)]="product.productDescription" value="{{product.productDescription}}"></td>
+       </tr>
+       <tr><td>Related Products </td>
+        <td><input type="text" [(ngModel)]="product.relatedProducts" value="{{product.relatedProducts}}"></td>
+       </tr>
+       <tr>
+        <td><button class="button" (click)="Add(product)">Add Product</button></td>
+    </tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<form name="myForm">
+<label>ATTID : </label><input [(ngModel)]="admin.attId" [ngModelOptions]="{standalone: true}" placeholder="attId" required >
+<br>
+<br>
+<label>Password : </label><input type="password" [(ngModel)]="admin.password" [ngModelOptions]="{standalone: true}" placeholder="password" required>
+<br>
+<br>
+<button (click)='adminLogin(admin)' >Sign in</button>
+</form>

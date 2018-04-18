@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<h1>Welcome to OPUS Mobile Store</h1>
+<br>
+<h2>List of Products</h2>
+<style>
+    table, th {
+        border: 1px solid black;
+    }
+    </style>
+<table id="myTable">
+   <tr>
+       <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Description</th>
+        <th>Related Products</th>
+        <th colspan="2">Actions</th>
+    </tr>
+    <tr>
+<tr *ngFor="let product of allProducts" > 
+   
+      <td><input type="text" name="productId" id="productId" value="{{product.productId}}" readonly></td>
+      <td><input type="text" name="productName" value="{{product.productName}}" readonly></td>
+      <td><input type="text" name="productDescription" value="{{product.productDescription}}" readonly></td>
+      <td><input type="text" name="relatedProducts" value="{{product.relatedProducts}}" readonly></td>
+      <td><button [routerLink]="['/update', product]" routerLinkActive="active">Edit Product</button></td>
+      <td><button class="delete" (click)="remove(product.productId)">Delete Product</button></td>
+</tr>
+<tr>
+    <td>
+            <button [routerLink]="['/add']" routerLinkActive="active">Add Product</button>
+</td>
+</tr>
+</table>
+</body>
+</html>

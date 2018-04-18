@@ -1,0 +1,11 @@
+.productslist{
+    
+    display: block;
+  color: #404040;
+  line-height: 2;
+  margin-bottom: 10px;
+  text-align: center;
+  direction: ltr;
+    height: 44px;
+    font-size: 16px;
+  }
